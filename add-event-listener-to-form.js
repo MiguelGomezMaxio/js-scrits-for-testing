@@ -18,7 +18,7 @@ document.querySelectorAll('form').forEach(form => {
                 console.log('Form tampering message sent:', data);
 
                 setTimeout(() => {
-                    form.submit();
+                    //form.submit();
                 }, 4000);
             })
             .catch(error => console.error('Error sending form tampering message:', error));
